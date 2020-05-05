@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PALP.petsitting"
+             BackgroundColor="AntiqueWhite">
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,20">
+            <Image Source="petsitting.png" VerticalOptions="Fill" HorizontalOptions="Fill" />
+            <Label Text="Pet Sitting"
+                   FontFamily="Bold"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="16"/>
+            <Label Text="Pet sitting is the act of temporarily taking care of another person's pet for a given time frame. It commonly occurs at the pet owner's home, but may also occur at the provider's home or at any pet sitting place. Pet sitting is a more personal and individualized arrangement for care compared to boarding or kenneling. Specialized training is usually not required for pet sitting. and we'd be glad and excited if you need overnight pet or house-sitting services and perfect if you need overnight pet care. "
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   TextColor="DarkSlateGray"
+                   FontSize="14"/>
+            <Button Text="click for Pet Sitting profiles" Clicked="ShowServiceProviders"  Style="{StaticResource buttonStyle}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

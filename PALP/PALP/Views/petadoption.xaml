@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PALP.petadoption"
+             BackgroundColor="AntiqueWhite">
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,20">
+            <Image Source="dogadopt.jpg" VerticalOptions="Fill" HorizontalOptions="Fill" />
+            <Label Text="Pet Adoption"
+                   FontFamily="Bold"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="16"/>
+            <Label Text="An animal shelter or pound is a place that stray, lost, abandoned or surrendered animals, mostly dogs and cats and sometimes sick or wounded wildlife, are kept and rehabilitated. While no-kill shelters exist, it is sometimes policy to euthanize animals that are or not claimed quickly enough by a previous or new owner."
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   TextColor="DarkSlateGray"
+                   FontSize="14"/>
+            <Button Text="click for Pet adoption" Clicked="ShowServiceProviders" Style="{StaticResource buttonStyle} "/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

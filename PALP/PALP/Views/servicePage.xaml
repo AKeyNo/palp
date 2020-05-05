@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PALP.Views.servicePage">
+    <ContentPage.Content>
+        <ListView  HasUnevenRows="True" BackgroundColor="White"  x:Name="listOfUsers">
+            <ListView.Header>
+                <ContentView Padding="0,5" BackgroundColor="White">
+                    <Label FontSize="Large" TextColor="BlueViolet"
+                   Text="Users Offering Services" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                </ContentView>
+            </ListView.Header>
+            
+            
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="OnDelete" CommandParameter="{Binding .}" Text="Delete" IsDestructive="True" />
+                            <MenuItem Clicked="onAdd" CommandParameter="{Binding .}" Text="Add" />
+                            <MenuItem Clicked="onView" CommandParameter="{Binding .}" Text="View" />
+                        </ViewCell.ContextActions>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition  />
+                            </Grid.ColumnDefinitions>
+                            <StackLayout VerticalOptions="FillAndExpand" Padding="5" Grid.Column="0">
+                                <Label FontSize="17"  Text="{Binding Username}" />
+                                <Label FontSize="12" Text="{Binding Dates, StringFormat='Dates: {0}'}" />
+                                <Label FontSize="12" Text="{Binding Times, StringFormat='Times: {0}'}" />
+                                <Label  FontSize="12"  Text="{Binding Bio, StringFormat='Bio: {0}'}" />
+                                <Label  FontSize="12"  Text="{Binding ZipCode, StringFormat='Bio: {0}'}" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            </ListView>
+    </ContentPage.Content>
+</ContentPage>

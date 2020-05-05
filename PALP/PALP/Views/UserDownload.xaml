@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PALP.UserDownload">
+<ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="FirstName"
+                   Placeholder="First Name"
+                    ></Entry>
+            <Entry x:Name="LastName"
+                   Placeholder="Last Name"
+                    ></Entry>
+            <Entry x:Name="UserRating"
+                   Placeholder="Rating"
+                    ></Entry>
+            <Entry x:Name="UserServices"
+                   Placeholder="Services"
+                    ></Entry>
+            <Entry x:Name="UserDates"
+                   Placeholder="Dates"
+                    ></Entry>
+            <Entry x:Name="UserTimes"
+                   Placeholder="Times"
+                    ></Entry>
+            <Entry x:Name="UserBio"
+                   Placeholder="Bio"
+                ></Entry>
+            <Entry x:Name="UserAddress"
+                   Placeholder="Address"
+                ></Entry>
+            <Entry x:Name="UserZipCode"
+                   Placeholder="Zip Code"
+                ></Entry>
+            <Button Text="Save" Margin="20" VerticalOptions="End"
+                    x:Name="SaveChanges"
+                        Clicked="Save_User"
+                    Style="{StaticResource buttonStyle}"/>
+
+        </StackLayout>
+
+</ContentPage.Content>
+</ContentPage>

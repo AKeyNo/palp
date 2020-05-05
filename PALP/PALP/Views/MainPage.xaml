@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="Black"
+            android:TabbedPage.BarSelectedItemColor="Red"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:PALP"
+            mc:Ignorable="d"
+            x:Class="PALP.MainPage"
+            BackgroundColor="AntiqueWhite"
+            NavigationPage.HasNavigationBar="False"
+            NavigationPage.HasBackButton="False">
+    <TabbedPage.Children>
+
+        <NavigationPage Title="HOME" Icon="home.png">
+            <x:Arguments>
+                <local:Page2 />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="Services" IconImageSource="c2.png">
+            <!--naviagtion property added to rest of the pages -->
+
+            <x:Arguments>
+                <local:Page1 />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="My Profile" IconImageSource="c1.png">
+            <!-- naviagtion property added to rest of the pages -->
+            <x:Arguments>
+                <local:UserProfile />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+
+</TabbedPage>

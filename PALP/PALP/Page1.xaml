@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PALP.Page1">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="capture.png"
+                   Grid.Row="0"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center"/>
+            <Label Text="Select a Service"
+                   TextColor="Black"
+                   HorizontalTextAlignment="Center"
+                   FontSize="25"
+                   Grid.Row="2"/>
+            <Button Text="Pet Walking"
+                    Style="{StaticResource buttonStyle}"
+                    Clicked="petwalking"
+                    Grid.Row="3"/>
+            <Button Text="Pet Sitting"
+                    Style="{StaticResource buttonStyle}"
+                    Clicked="petsitting"
+                    Grid.Row="4"/>
+            <Button Text="Pet Grooming"
+                    Style="{StaticResource buttonStyle}"
+                    Clicked="petgrooming"
+                    Grid.Row="5"/>
+            <Button Text="Pet Adoption"
+                    Style="{StaticResource buttonStyle}" 
+                    Clicked="petadoption"
+                    Grid.Row="6"/>
+
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

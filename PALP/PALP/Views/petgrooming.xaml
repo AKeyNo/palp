@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PALP.petgrooming"
+             BackgroundColor="AntiqueWhite">
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,20">
+            <Image Source="petgrooming.jpg" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Label Text="Pet Grooming"
+                   FontFamily="Bold"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   FontSize="16"/>
+            <Label Text="Dog grooming refers to both the hygienic care and cleaning of a dog, as well as a process by which a dog's physical appearance is enhanced for showing or other types of competition. A dog groomer is a person who earns their living grooming dogs. We'd love to enhance the appearance of your companion!"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" 
+                   TextColor="DarkSlateGray"
+                   FontSize="14"/>
+            <Button Text="click for Pet Grooming" Clicked="ShowServiceProviders"
+                    Style="{StaticResource buttonStyle}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

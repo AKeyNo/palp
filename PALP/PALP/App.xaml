@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PALP.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="BorderColor" Value="DarkSlateGray" />
+                <Setter Property="BorderRadius" Value="2" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="#cfc7b8"/>
+                <Setter Property="WidthRequest" Value="275"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="FlexLayout.AlignContent" Value="Stretch"/>
+            </Style>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="TitleFont">
+                <On Platform="Android" Value="BunchBlossoms.ttf#Bunch Blossoms Personal Use" />
+            </OnPlatform>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

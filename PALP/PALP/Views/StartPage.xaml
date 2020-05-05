@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PALP.Views.StartPage"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="AntiqueWhite"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Center" Margin="30,0,30,0" >
+                <Label Text="People Against Lonely Pets"
+                       FontSize="26"
+                       TextColor="DarkSlateGray"
+                       FontFamily="{StaticResource TitleFont}">
+                </Label>
+                <Image Source="capture.png" 
+                       HeightRequest="140" 
+                       WidthRequest="140" 
+                       FlexLayout.AlignSelf="Center" 
+                       BackgroundColor="Transparent" />
+                <Label Text="The right pet service pro is a few taps away!"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Button x:Name="logIn" 
+                        FontSize="Medium" 
+                        BorderColor="Black" 
+                        CornerRadius="5"  
+                        Clicked="LoginButton_Clicked" 
+                        HorizontalOptions="CenterAndExpand" 
+                        Text="Login" 
+                        TextColor="White" 
+                        BackgroundColor="#3399ff"
+                        Style="{StaticResource buttonStyle}"/>
+                <Label Text="or" 
+                       FontSize="15" 
+                       TextColor="DarkGray"
+                       BackgroundColor="Transparent" 
+                       FlexLayout.AlignSelf="Center"/>
+                <Button x:Name="signUp" 
+                        FontSize="Medium" 
+                        TextColor="White" 
+                        BorderColor="Black" 
+                        BackgroundColor="#00b33c"  
+                        CornerRadius="5"  
+                        Clicked="SignUp_Clicked" 
+                        HorizontalOptions="CenterAndExpand" 
+                        Text="Sign Up"
+                        Style="{StaticResource buttonStyle}"/>
+                <Label Text=""/>
+            </FlexLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

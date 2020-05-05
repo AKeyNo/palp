@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PALP.UserFromList"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                </Grid.RowDefinitions>
+
+                <!-- header background -->
+                <Image Source="HeaderBackground.png" Aspect="AspectFill"/>
+                <Image Source="CurvedMask.png" VerticalOptions="End" Aspect="AspectFill" Margin="0,0,0,-1"/>
+
+                <!-- profile image -->
+                <Image Source="w1.jpg" Margin="0,0,0,-50" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="End"/>
+
+                <!-- Profile Name -->
+                <StackLayout Grid.Row="1" HorizontalOptions="Center" Padding="0,50,0,00">
+                    <Label x:Name="Users_1Name" HorizontalTextAlignment="Center" Text="{Binding FirstName} + {Binding LastName}" FontAttributes="Bold" FontSize="25" TextColor="DarkSlateGray"/>
+                    <Label x:Name="Services" HorizontalTextAlignment="Center" Text="Services offered: " Margin="0,-5" />
+                    <Label x:Name="User_Services" HorizontalTextAlignment="Center" Text="{Binding Services}" Margin="0,-5" />
+                    <Label x:Name="User_Zip" HorizontalTextAlignment="Center" Text="{Binding ZipCode}" Margin="0,5" />
+                    <Label x:Name="User_email" HorizontalTextAlignment="Center" Text="{Binding email}" Margin="0,5" />
+                </StackLayout>
+
+                <!-- Social Stats Section -->
+                <Grid Grid.Row="2" ColumnSpacing="0" RowSpacing="1" Margin="0,30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Column="0">
+                        <Label Text="Times"
+                               HorizontalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               TextColor="DarkSlateGray"/>
+                        <Label x:Name="Users_Times" HorizontalTextAlignment="Center" Text="{Binding Times}" />
+                        <Label x:Name="Users_Dates" HorizontalTextAlignment="Center" Text="{Binding Dates}" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="1">
+                        <Label Text="Jobs"
+                               HorizontalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               TextColor="DarkSlateGray"
+                               />
+                        <Label Text="3"
+                               HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="2">
+                        <Label Text="Rating"
+                               HorizontalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               TextColor="DarkSlateGray"/>
+                        <Label x:Name="User_Rating" Text="{Binding Rating}"
+                               HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </Grid>
+
+                <!-- profile description -->
+                <ScrollView Grid.Row="3">
+                    <Label x:Name ="User_Bio" Margin="20,0" HorizontalTextAlignment="Center" 
+				Text="{Binding Bio}"
+                           TextColor="DarkSlateGray"/>
+                </ScrollView>
+
+            </Grid>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

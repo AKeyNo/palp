@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="PALP.Views.LoginPage"
+             BackgroundColor="AntiqueWhite"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout x:Name="MainLayout">
+
+        <StackLayout x:Name="LogoLayout" VerticalOptions="FillAndExpand">
+            <Label x:Name="Lbl_NoInternet" 
+                   HorizontalOptions="Center" 
+                   TextColor="White"
+                   BackgroundColor="Red"/>
+            <Image x:Name="LoginLogo" 
+                   Source="Capture.png" 
+                   Margin="0,80,0,0"/>
+
+        </StackLayout>
+
+        <StackLayout x:Name="EntryLayout" VerticalOptions="StartAndExpand">
+            <StackLayout.Padding>
+                <OnIdiom x:TypeArguments="Thickness"
+                         Phone="40,0,40,0"
+                         Tablet="140,150,140,0">
+                </OnIdiom>
+            </StackLayout.Padding>
+
+            <ActivityIndicator x:Name="ActivitySpinner" 
+                               Color="Red"
+                               IsRunning="True"/>
+
+            <Label x:Name="Lbl_Username"
+                   Text="Username"/>
+            <Entry x:Name="Ent_Username"
+                   Placeholder="Username"
+                   TextColor="DarkSlateGray"/>
+            <Label x:Name="Lbl_Password" 
+                   Text="Password"
+                   TextColor="DarkSlateGray"/>
+            <Entry x:Name="Ent_Password"
+                   Placeholder="Password"
+                   IsPassword="True"/>
+            <Button x:Name="btt_SignIn" 
+                    Text="Sign In"
+                    Clicked="SignInClicked"
+                    Style="{StaticResource buttonStyle}"/>
+            <Button TextColor="Black" 
+                    BackgroundColor="Transparent" 
+                    Clicked="signup_ClickedEvent" 
+                    Text="Sign Up" 
+                    FontSize="13" 
+                    FlexLayout.AlignSelf="Start" />
+        
+        </StackLayout>
+        
+    </StackLayout>
+    
+</ContentPage>
